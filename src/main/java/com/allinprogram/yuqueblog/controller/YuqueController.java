@@ -18,7 +18,7 @@ public class YuqueController {
     private UserClient userClient;
 
     @GetMapping("")
-    public String baidu() {
+    public String getUser() {
         return userClient.getUser();
     }
 }
