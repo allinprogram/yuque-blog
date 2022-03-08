@@ -9,5 +9,4 @@ public class YuqueBlogApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(YuqueBlogApplication.class, args);
 	}
-
 }
