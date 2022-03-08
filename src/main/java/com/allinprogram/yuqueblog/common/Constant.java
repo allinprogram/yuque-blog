@@ -12,9 +12,7 @@ public class Constant {
 
     public static final class YuQueApi {
 
-        public static final String BASE = "https://www.yuque.com/api/v2/";
-        public static final String USER = BASE + "/users/" + USERNAME;
-        public static final String GROUP = USER + "/groups";
-        public static final String DOC = BASE + "/repos/" + USERNAME + "/docs";
+        public static final String BASE = "https://www.yuque.com/api/v2";
+
     }
 }
