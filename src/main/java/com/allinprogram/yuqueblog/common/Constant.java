@@ -8,7 +8,7 @@ package com.allinprogram.yuqueblog.common;
  */
 public class Constant {
 
-    public static String USERNAME;
+    public static String USERNAME = "iron-man";
 
     public static final class YuQueApi {
 
