@@ -5,6 +5,8 @@ import com.dtflys.forest.annotation.Var;
 import org.springframework.cache.annotation.Cacheable;
 
 /**
+ * 调用存储库相关API
+ *
  * @author AllinProgram
  * @since 2022-03-08 19:16 星期二
  */
