@@ -16,8 +16,8 @@ public interface RepoClient extends BaseClient {
      * 获取repo的文档列表
      */
     @Cacheable("docs")
-    @Get("/repos/{id}/docs")
-    String getDocs(@Var("id") String id);
+    @Get("/repos/{repoId}/docs")
+    String getDocs(@Var("repoId") String repoId);
 
     /**
      * 获取单篇文档的详细信息

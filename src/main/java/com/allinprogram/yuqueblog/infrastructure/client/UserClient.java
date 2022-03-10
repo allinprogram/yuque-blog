@@ -1,6 +1,7 @@
 package com.allinprogram.yuqueblog.infrastructure.client;
 
 import com.dtflys.forest.annotation.Get;
+import com.dtflys.forest.annotation.Var;
 import org.springframework.cache.annotation.Cacheable;
 
 /**
@@ -22,6 +23,6 @@ public interface UserClient extends BaseClient {
      * 获取当前登录用户的所有repo
      */
     @Cacheable("repos")
-    @Get("/users/iron-man/repos")
-    String getRepos();
+    @Get("/users/{username}/repos")
+    String getRepos(@Var("username")String username);
 }
