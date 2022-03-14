@@ -24,5 +24,5 @@ public interface RepoClient extends BaseClient {
      */
     @Cacheable("doc")
     @Get("/repos/{namespace}/docs/{slug}")
-    String getDoc(String namespace, String slug);
+    String getDoc(@Var("namespace") String namespace, @Var("slug") String slug);
 }
