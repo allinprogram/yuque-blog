@@ -5,15 +5,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * 一般在列表的场景返回的仓库信息
+ * 仓库的详细信息
  *
  * @author AllinProgram
- * @since 2022-03-11 15:47 星期五
+ * @since 2022-03-14 23:12 星期一
  */
 @Getter
 @Setter
-public class RepoDTO extends BaseDTO {
-
+public class RepoDetailDTO extends BaseDTO {
     /**
      * 类型：Book文档
      */
@@ -40,6 +39,12 @@ public class RepoDTO extends BaseDTO {
      */
     private UserDTO user;
     /**
+     * ● 目录原文
+     * ●
+     */
+    @JSONField(name = "toc_yml")
+    private UserDTO tocYml;
+    /**
      * 介绍
      */
     private String description;
@@ -53,4 +58,19 @@ public class RepoDTO extends BaseDTO {
      */
     @JSONField(name = "public")
     private Integer isPublic;
+    /**
+     * 文档数量
+     */
+    @JSONField(name = "items_count")
+    private Integer itemsCount;
+    /**
+     * 喜欢数量
+     */
+    @JSONField(name = "likes_count")
+    private Integer likesCount;
+    /**
+     * 订阅数量
+     */
+    @JSONField(name = "watches_count")
+    private Integer watchesCount;
 }

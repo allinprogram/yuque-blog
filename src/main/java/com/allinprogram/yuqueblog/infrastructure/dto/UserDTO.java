@@ -11,7 +11,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class UserDTO extends BaseDTO{
+public class UserDTO extends BaseDTO {
 
     /**
      * 类型：User用户、Group团队

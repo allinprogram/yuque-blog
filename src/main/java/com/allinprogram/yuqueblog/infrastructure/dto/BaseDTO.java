@@ -1,5 +1,6 @@
 package com.allinprogram.yuqueblog.infrastructure.dto;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,9 +18,11 @@ public class BaseDTO {
     /**
      * 创建时间
      */
-    private String created_at;
+    @JSONField(name = "created_at")
+    private String createdAt;
     /**
      * 更新时间
      */
-    private String updated_at;
+    @JSONField(name = "updated_at")
+    private String updatedAt;
 }
