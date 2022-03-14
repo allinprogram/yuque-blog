@@ -26,7 +26,7 @@ public class DocDTO extends BaseDTO {
      * 文档创建人user_id
      */
     @JSONField(name = "user_id")
-    private String userId;
+    private Integer userId;
     /**
      * 描述了正文的格式[asl,markdown]
      */
@@ -35,26 +35,26 @@ public class DocDTO extends BaseDTO {
      * 是否公开[1-公开,0-私密]
      */
     @JSONField(name = "public")
-    private String isPublic;
+    private Integer isPublic;
     /**
      * 状态[1-正常,0-草稿]
      */
-    private String status;
+    private Integer status;
     /**
      * 喜欢数量
      */
     @JSONField(name = "likes_count")
-    private String likesCount;
+    private Integer likesCount;
     /**
      * 评论数量
      */
     @JSONField(name = "comments_count")
-    private String commentsCount;
+    private Integer commentsCount;
     /**
      * 文档内容更新时间
      */
     @JSONField(name = "content_updated_at")
-    private String contentUpdatedAt;
+    private Integer contentUpdatedAt;
     /**
      * <BookSerializer>所属知识库
      */

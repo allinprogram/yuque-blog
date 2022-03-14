@@ -12,11 +12,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class DocDetailDTO {
-    /**
-     * 文档编号
-     */
-    private String id;
+public class DocDetailDTO extends BaseDTO {
     /**
      * 文档路径
      */
@@ -29,11 +25,11 @@ public class DocDetailDTO {
      * 仓库编号，就是 repo_id
      */
     @JSONField(name = "book_id")
-    private String bookId;
+    private Integer bookId;
     /**
      * 仓库信息 <BookSerializer>，就是 repo 信息
      */
-    private String book;
+    private RepoDTO book;
     /**
      * 用户/团队编号
      */

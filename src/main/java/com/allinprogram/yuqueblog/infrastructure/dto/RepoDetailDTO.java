@@ -33,7 +33,7 @@ public class RepoDetailDTO extends BaseDTO {
      * 所属团队/用户编号
      */
     @JSONField(name = "user_id")
-    private String userId;
+    private Integer userId;
     /**
      * User
      */
@@ -51,7 +51,7 @@ public class RepoDetailDTO extends BaseDTO {
      * 创建人User Id
      */
     @JSONField(name = "creator_id")
-    private String creatorId;
+    private Integer creatorId;
     /**
      * 公开状态[1公开、0私密]
      */
