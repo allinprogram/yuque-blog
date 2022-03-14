@@ -39,8 +39,7 @@ public class RepoDetailDTO extends BaseDTO {
      */
     private UserDTO user;
     /**
-     * ● 目录原文
-     * ●
+     * 目录原文
      */
     @JSONField(name = "toc_yml")
     private UserDTO tocYml;
