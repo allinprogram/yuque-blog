@@ -1,5 +1,6 @@
 package com.allinprogram.yuqueblog.infrastructure.client;
 
+import com.allinprogram.yuqueblog.infrastructure.dto.UserDTO;
 import com.dtflys.forest.annotation.Get;
 import com.dtflys.forest.annotation.Var;
 import org.springframework.cache.annotation.Cacheable;
@@ -17,7 +18,8 @@ public interface UserClient extends BaseClient {
      */
     @Cacheable("user")
     @Get("/user")
-    String getUser();
+    // 这里自动转换存在问题，http响应结果不是单纯的dto结构
+    UserDTO getUser();
 
     /**
      * 获取当前登录用户的所有repo

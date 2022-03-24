@@ -1,5 +1,6 @@
 package com.allinprogram.yuqueblog.infrastructure.dto;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -32,5 +33,6 @@ public class UserDTO extends BaseDTO {
     /**
      * 头像URL
      */
-    private String avatar_url;
+    @JSONField(name = "avatar_url")
+    private String avatarUrl;
 }

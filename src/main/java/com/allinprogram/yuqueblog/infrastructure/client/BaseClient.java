@@ -10,8 +10,8 @@ import static com.allinprogram.yuqueblog.common.Constant.YuQueApi.BASE;
  */
 @BaseRequest(
         baseURL = BASE,
+        contentType = "application/json",
         headers = {
-                "Content-Type: application/json",
                 "User-Agent: yuque-blog",
                 "X-Auth-Token: "
         }
