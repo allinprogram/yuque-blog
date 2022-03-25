@@ -4,6 +4,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 /**
  * 文档基本信息，一般用在列表场景
  *
@@ -54,7 +56,7 @@ public class DocDTO extends BaseDTO {
      * 文档内容更新时间
      */
     @JSONField(name = "content_updated_at")
-    private Integer contentUpdatedAt;
+    private LocalDateTime contentUpdatedAt;
     /**
      * <BookSerializer>所属知识库
      */

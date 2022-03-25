@@ -4,6 +4,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 /**
  * @author AllinProgram
  * @since 2022-03-11 15:56 星期五
@@ -19,10 +21,10 @@ public class BaseDTO {
      * 创建时间
      */
     @JSONField(name = "created_at")
-    private String createdAt;
+    private LocalDateTime createdAt;
     /**
      * 更新时间
      */
     @JSONField(name = "updated_at")
-    private String updatedAt;
+    private LocalDateTime updatedAt;
 }

@@ -4,6 +4,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 /**
  * 文档详细信息
  *
@@ -90,10 +92,10 @@ public class DocDetailDTO extends BaseDTO {
      * 文档内容更新时间
      */
     @JSONField(name = "content_updated_at")
-    private String contentUpdatedAt;
+    private LocalDateTime contentUpdatedAt;
     /**
      * 删除时间，未删除为 null
      */
     @JSONField(name = "deleted_at")
-    private String deletedAt;
+    private LocalDateTime deletedAt;
 }
