@@ -17,13 +17,12 @@ public interface UserClient extends BaseClient {
      */
     @Cacheable("user")
     @Get("/user")
-    // 这里自动转换存在问题，http响应结果不是单纯的dto结构
     String getUser();
 
     /**
      * 获取当前登录用户的所有repo
      */
     @Cacheable("repos")
-    @Get("/users/{username}/repos")
-    String getRepos(@Var("username")String username);
+    @Get("/users/{userId}/repos")
+    String getRepos(@Var("userId")Integer userId);
 }

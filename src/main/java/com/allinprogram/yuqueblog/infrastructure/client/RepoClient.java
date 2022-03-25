@@ -12,12 +12,16 @@ import org.springframework.cache.annotation.Cacheable;
  */
 public interface RepoClient extends BaseClient {
 
+    @Cacheable("docs")
+    @Get("/repos/{repoId}")
+    String getRepo(@Var("repoId") Integer repoId);
+
     /**
      * 获取repo的文档列表
      */
     @Cacheable("docs")
     @Get("/repos/{repoId}/docs")
-    String getDocs(@Var("repoId") String repoId);
+    String getDocs(@Var("repoId") Integer repoId);
 
     /**
      * 获取单篇文档的详细信息

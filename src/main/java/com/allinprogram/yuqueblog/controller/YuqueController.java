@@ -1,6 +1,7 @@
 package com.allinprogram.yuqueblog.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.allinprogram.yuqueblog.infrastructure.client.RepoClient;
 import com.allinprogram.yuqueblog.infrastructure.client.UserClient;
 import com.allinprogram.yuqueblog.infrastructure.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +22,30 @@ public class YuqueController {
     @Autowired
     private UserClient userClient;
 
+    @Autowired
+    private RepoClient repoClient;
+
     @GetMapping("user")
     public UserDTO getUser() {
         String rst = userClient.getUser();
         String dataJson = JSONObject.parseObject(rst).get("data").toString();
         return JSONObject.parseObject(dataJson, UserDTO.class);
+    }
+
+    @GetMapping("repos")
+    public String getRepos() {
+        return userClient.getRepos(getUser().getId());
+    }
+
+    @GetMapping("repo")
+    public void getRepo() {
+    }
+
+    @GetMapping("docs")
+    public void getDocs() {
+    }
+
+    @GetMapping("doc")
+    public void getDoc() {
     }
 }
