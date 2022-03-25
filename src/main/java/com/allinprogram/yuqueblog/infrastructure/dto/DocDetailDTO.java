@@ -15,10 +15,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class DocDetailDTO extends BaseDTO {
-    /**
-     * 文档路径
-     */
-    private String slug;
+
     /**
      * 标题
      */

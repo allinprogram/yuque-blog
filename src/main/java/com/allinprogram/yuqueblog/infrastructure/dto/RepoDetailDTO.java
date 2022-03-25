@@ -18,10 +18,6 @@ public class RepoDetailDTO extends BaseDTO {
      */
     private String type;
     /**
-     * 仓库路径
-     */
-    private String slug;
-    /**
      * 名称
      */
     private String name;

@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class DocDTO extends BaseDTO {
-
     /**
      * 文档路径
      */

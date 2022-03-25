@@ -18,6 +18,10 @@ public class BaseDTO {
      */
     private Integer id;
     /**
+     * 路径
+     */
+    private String slug;
+    /**
      * 创建时间
      */
     @JSONField(name = "created_at")
