@@ -3,9 +3,7 @@ package com.allinprogram.yuqueblog.controller;
 import com.allinprogram.yuqueblog.common.YuqueRespParseUtil;
 import com.allinprogram.yuqueblog.infrastructure.client.RepoClient;
 import com.allinprogram.yuqueblog.infrastructure.client.UserClient;
-import com.allinprogram.yuqueblog.infrastructure.dto.DocDTO;
-import com.allinprogram.yuqueblog.infrastructure.dto.RepoDTO;
-import com.allinprogram.yuqueblog.infrastructure.dto.UserDTO;
+import com.allinprogram.yuqueblog.infrastructure.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,8 +42,8 @@ public class YuqueController {
     }
 
     @GetMapping("repo")
-    public RepoDTO getRepo(Integer repoId) {
-        return YuqueRespParseUtil.parse(repoClient.getRepo(repoId), RepoDTO.class);
+    public RepoDetailDTO getRepo(Integer repoId) {
+        return YuqueRespParseUtil.parse(repoClient.getRepo(repoId), RepoDetailDTO.class);
     }
 
     @GetMapping("docs")
@@ -55,7 +53,7 @@ public class YuqueController {
     }
 
     @GetMapping("doc")
-    public DocDTO getDoc(String namespace, String slug) {
-        return YuqueRespParseUtil.parse( repoClient.getDoc(namespace, slug), DocDTO.class);
+    public DocDetailDTO getDoc(String namespace, String slug) {
+        return YuqueRespParseUtil.parse( repoClient.getDoc(namespace, slug), DocDetailDTO.class);
     }
 }
