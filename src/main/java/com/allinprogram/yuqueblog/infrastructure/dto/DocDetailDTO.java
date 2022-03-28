@@ -26,7 +26,7 @@ public class DocDetailDTO extends BaseDTO {
     @JSONField(name = "book_id")
     private Integer bookId;
     /**
-     * 仓库信息 <BookSerializer>，就是 repo 信息
+     * 仓库信息，就是 repo 信息
      */
     private RepoDTO book;
     /**

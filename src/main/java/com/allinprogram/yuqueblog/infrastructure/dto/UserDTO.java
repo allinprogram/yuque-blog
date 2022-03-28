@@ -15,6 +15,16 @@ import lombok.Setter;
 public class UserDTO extends BaseDTO {
 
     /**
+     * 企业空间编号
+     */
+    @JSONField(name = "space_id")
+    private Integer spaceId;
+    /**
+     * 用户账户编号
+     */
+    @JSONField(name = "account_id")
+    private Integer accountId;
+    /**
      * 类型：User用户、Group团队
      */
     private String type;
@@ -27,12 +37,32 @@ public class UserDTO extends BaseDTO {
      */
     private String name;
     /**
-     * 描述
+     *团队创建人，仅适用于 type - 'Group'
      */
-    private String description;
+    @JSONField(name = "owner_id")
+    private Integer ownerId;
+    /**
+     * 仓库数量
+     */
+    @JSONField(name = "books_count")
+    private Integer booksCount;
+    /**
+     * 公开仓库数量
+     */
+    @JSONField(name = "public_books_count")
+    private Integer publicBooksCount;
+    /**
+     * 团队成员数量
+     */
+    @JSONField(name = "members_count")
+    private Integer membersCount;
     /**
      * 头像URL
      */
     @JSONField(name = "avatar_url")
     private String avatarUrl;
+    /**
+     * 描述
+     */
+    private String description;
 }
