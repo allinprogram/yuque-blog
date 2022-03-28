@@ -49,11 +49,6 @@ public class RepoDetailDTO extends BaseDTO {
     @JSONField(name = "creator_id")
     private Integer creatorId;
     /**
-     * 公开状态[1公开、0私密]
-     */
-    @JSONField(name = "public")
-    private Integer isPublic;
-    /**
      * 文档数量
      */
     @JSONField(name = "items_count")

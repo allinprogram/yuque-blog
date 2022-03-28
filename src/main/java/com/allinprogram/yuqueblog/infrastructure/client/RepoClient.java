@@ -12,7 +12,7 @@ import org.springframework.cache.annotation.Cacheable;
  */
 public interface RepoClient extends BaseClient {
 
-    @Cacheable("docs")
+    @Cacheable("repo")
     @Get("/repos/{repoId}")
     String getRepo(@Var("repoId") Integer repoId);
 

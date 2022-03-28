@@ -32,11 +32,7 @@ public class DocDTO extends BaseDTO {
      * 描述了正文的格式[asl,markdown]
      */
     private String format;
-    /**
-     * 是否公开[1-公开,0-私密]
-     */
-    @JSONField(name = "public")
-    private Integer isPublic;
+
     /**
      * 状态[1-正常,0-草稿]
      */
@@ -67,5 +63,6 @@ public class DocDTO extends BaseDTO {
     /**
      * 最后修改人
      */
-    private UserDTO last_editor;
+    @JSONField(name = "last_editor")
+    private UserDTO lastEditor;
 }

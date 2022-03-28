@@ -22,6 +22,11 @@ public class BaseDTO {
      */
     private String slug;
     /**
+     * 公开级别 [0 - 私密, 1 - 公开]
+     */
+    @JSONField(name = "public")
+    private Boolean isPublic;
+    /**
      * 创建时间
      */
     @JSONField(name = "created_at")

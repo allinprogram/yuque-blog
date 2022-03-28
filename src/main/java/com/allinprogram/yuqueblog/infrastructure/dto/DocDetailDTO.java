@@ -67,11 +67,6 @@ public class DocDetailDTO extends BaseDTO {
     @JSONField(name = "creator_id")
     private Integer creatorId;
     /**
-     * 公开级别 [0 - 私密, 1 - 公开]
-     */
-    @JSONField(name = "public")
-    private Integer isPublic;
-    /**
      * 状态 [0 - 草稿, 1 - 发布]
      */
     private Integer status;

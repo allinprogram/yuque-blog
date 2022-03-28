@@ -4,7 +4,7 @@ package com.allinprogram.yuqueblog.common;
  * @author AllinProgram
  * @since 2022-03-14 23:28 星期一
  */
-public class ParseFieldUtil {
+public class FieldParseUtil {
 
     static String[] fields = {"id - 文档编号",
             "slug - 文档路径",
