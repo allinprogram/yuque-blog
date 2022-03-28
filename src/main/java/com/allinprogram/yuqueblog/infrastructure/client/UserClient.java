@@ -24,5 +24,5 @@ public interface UserClient extends BaseClient {
      */
     @Cacheable("repos")
     @Get("/users/{userId}/repos")
-    String getRepos(@Var("userId")Integer userId);
+    String getRepos(@Var("userId") Integer userId);
 }

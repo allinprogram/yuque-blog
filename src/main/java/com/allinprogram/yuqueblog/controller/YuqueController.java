@@ -54,6 +54,6 @@ public class YuqueController {
 
     @GetMapping("doc")
     public DocDetailDTO getDoc(String namespace, String slug) {
-        return YuqueRespParseUtil.parse( repoClient.getDoc(namespace, slug), DocDetailDTO.class);
+        return YuqueRespParseUtil.parse(repoClient.getDoc(namespace, slug), DocDetailDTO.class);
     }
 }

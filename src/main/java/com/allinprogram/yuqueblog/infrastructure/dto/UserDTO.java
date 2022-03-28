@@ -37,7 +37,7 @@ public class UserDTO extends BaseDTO {
      */
     private String name;
     /**
-     *团队创建人，仅适用于 type - 'Group'
+     * 团队创建人，仅适用于 type - 'Group'
      */
     @JSONField(name = "owner_id")
     private Integer ownerId;
