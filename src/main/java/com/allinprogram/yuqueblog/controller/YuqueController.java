@@ -23,32 +23,32 @@ import java.util.List;
 public class YuqueController {
 
     @Autowired
-    private YuqueApiClient yuqueClient;
+    private YuqueApiClient yuqueApiClient;
 
     @GetMapping("user")
     public UserDTO getUser() {
-        return YuqueRespParseUtil.parse(yuqueClient.getUser(), UserDTO.class);
+        return YuqueRespParseUtil.parse(yuqueApiClient.getUser(), UserDTO.class);
     }
 
     @GetMapping("repos")
     public List<RepoDTO> getRepos(Integer userId) {
-        return YuqueRespParseUtil.parseList(yuqueClient.getRepos(userId), RepoDTO.class);
+        return YuqueRespParseUtil.parseList(yuqueApiClient.getRepos(userId), RepoDTO.class);
 
     }
 
     @GetMapping("repo")
     public RepoDetailDTO getRepo(Integer repoId) {
-        return YuqueRespParseUtil.parse(yuqueClient.getRepo(repoId), RepoDetailDTO.class);
+        return YuqueRespParseUtil.parse(yuqueApiClient.getRepo(repoId), RepoDetailDTO.class);
     }
 
     @GetMapping("docs")
     public List<DocDTO> getDocs(Integer repoId) {
-        return YuqueRespParseUtil.parseList(yuqueClient.getDocs(repoId), DocDTO.class);
+        return YuqueRespParseUtil.parseList(yuqueApiClient.getDocs(repoId), DocDTO.class);
 
     }
 
     @GetMapping("doc")
     public DocDetailDTO getDoc(String namespace, String slug) {
-        return YuqueRespParseUtil.parse(yuqueClient.getDoc(namespace, slug), DocDetailDTO.class);
+        return YuqueRespParseUtil.parse(yuqueApiClient.getDoc(namespace, slug), DocDetailDTO.class);
     }
 }
