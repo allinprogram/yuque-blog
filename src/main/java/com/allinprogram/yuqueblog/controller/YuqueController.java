@@ -13,7 +13,6 @@ import java.util.List;
 
 /**
  * 语雀API Controller
- * TODO 可以加上注解校验器 by Hibernate
  *
  * @author AllinProgram
  * @since 2022-03-08 13:39 星期二
