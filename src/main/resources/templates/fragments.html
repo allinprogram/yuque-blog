@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>AllinProgram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=""/>
+    <meta name="author" content="AllinProgram.com"/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap"/>
+    <link rel="stylesheet" type="text/css" media="all" href="./css/style.css"/>
+    <link rel="shrtcut icon" href="/" type="image/x-icon"/>
+</head>
+
+<div class="header" th:fragment="nav">
+    <a class="title" href="/" th:inline="text">[[${user.name}]]</a>
+    <div class="nav" style="float: right;">
+        <a href="/repos">归档</a>
+        <a href="/about">关于</a>
+    </div>
+</div>
+
+<footer th:fragment="footer">
+    <span>Copyright©2022 AllinProgram All rights reserved.</span>
+    <br>
+    <a href="https://beian.miit.gov.cn/" rel="external nofollow" target="_blank">赣ICP备2020012374号-1</a>
+</footer>
+
+</html>

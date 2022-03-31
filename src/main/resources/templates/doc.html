@@ -11,12 +11,7 @@
         <div class="home">
             <div style="margin-top:24px">
                 <div style="margin-top: 200px;">
-                    <ul th:each="doc:${docs}">
-                        <li>
-                            <span th:text="${doc.createdAt.getYear()}"></span>
-                            <span th:text="${doc.title}"></span>
-                        </li>
-                    </ul>
+                    <span th:inline="text">[[${user.description}]]</span>
                 </div>
             </div>
         </div>
